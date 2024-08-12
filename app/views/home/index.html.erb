@@ -1,7 +1,15 @@
 <%= render "nav"%>
 
-<h1 >HOme</h1>
+
+<ul>    
+  <% @posts.each do | post | %>    
+      <li>
+        <%= link_to post.title, post %>
+      </li>    
+  <% end %>
+</ul>
 
 
- <%# class: "btn btn-lg btn-primary rounded-pill"  %>
-<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-lg btn-primary rounded-pill" %>
+<%# class: "btn btn-lg btn-primary rounded-pill"  %>
+
+
