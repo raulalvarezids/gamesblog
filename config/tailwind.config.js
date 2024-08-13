@@ -16,7 +16,8 @@ module.exports = {
         'main-text':'#52493A',
         'parrafo':'#C8569',
         'nav-color':'#E8E0AE',
-        'bags':'#E8E0AE'
+        'bags':'#E8E0AE',
+        'inputsbd':'#DE733E'
       }
     },
   },

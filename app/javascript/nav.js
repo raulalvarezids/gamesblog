@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 
         if(menu.classList.contains('hidden')){
-            navmain.classList.add('flex', 'flex-col', 'w-full', 'left-0',  'items-center', 'gap-y-5')            
+            navmain.classList.add('flex', 'flex-col', 'w-full', 'left-0',  'items-center', 'gap-y-5','absolute', 'z-20')            
             menu.classList.remove('hidden')
             divhhidden.classList.remove('hidden')
             
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }else{
             menu.classList.add('hidden') 
             divhhidden.classList.add('hidden') 
-            navmain.classList.remove('flex', 'flex-col', 'w-full', 'left-0',  'items-center', 'gap-y-5')
+            navmain.classList.remove('flex', 'flex-col', 'w-full', 'left-0',  'items-center', 'gap-y-5','absolute', 'z-20')
         }
         
     });

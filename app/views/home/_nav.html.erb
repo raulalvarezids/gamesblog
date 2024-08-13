@@ -3,13 +3,13 @@
 <header class=''>
     <nav class="flex justify-between px-3 bg-bags items-center" >        
        
-         <%= image_tag('games.png', class:'w-16 h-16 rounded-full bg-repeat')  %>
+         <%= image_tag('games.png', class:'w-16 h-16 rounded-full bg-repeat lg:w-20 lg:h-20')  %>
 
 
-        <h1 class='flex-1 text-center text-main-text' >Games review</h1>
+        <h1 class='flex-1 text-center text-main-text md:flex-auto md:text-start md:pl-11  lg:text-2xl' >Games review</h1>
 
 
-        <ul class="menu hidden absolute z-20 ulnav top-1/3 " >            
+        <ul class="menu hidden ulnav top-1/3 md:flex md:gap-x-5 lg:text-xl" >            
 
             <li>                                            
                 <% if !user_signed_in? %>
@@ -43,7 +43,7 @@
 
         </div>
         
-        <div class='w-16 h-16  flex items-center justify-end relative z-20 '>
+        <div class='w-16 h-16  flex items-center justify-end relative z-20  md:hidden'>
             <button id="greet-user-button" class='hamburger pointer' >
             
             <%= image_tag('menu.png', class:'w-5 h-5 ') %>                        
