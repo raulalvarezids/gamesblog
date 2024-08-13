@@ -1,26 +1,11 @@
 <%= render "nav"%>
 
 
+  <div class='flex gap-8 mt-5 w-[80%] mx-auto justify-center flex-wrap '>
+    <%= render @posts%>
+  </div>
+
   
-  <% @posts.each do | post | %>    
-      <div>
-        <h1>
-            <%= link_to post.title, post %>
-        </h1>
-        <p>
-          <%= post.body%>
-        </p>
-
-        <%= image_tag(post.photo) %>
-
-
-      </div>
-
-            
-  <% end %>
-
-
-
-<%# class: "btn btn-lg btn-primary rounded-pill"  %>
+  
 
 

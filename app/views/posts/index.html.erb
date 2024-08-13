@@ -1,17 +1,7 @@
 <%= render 'home/nav'%>
+           
+<div class='flex gap-8 mt-5 w-[80%] mx-auto justify-center flex-wrap'>
+  <%= render @user.posts %>
+</div>
 
-  <% @user.posts.each do | post | %>    
-      <div>
-        <h1>
-            <%= link_to post.title, post %>
-        </h1>
-        <p>
-          <%= post.body%>
-        </p>
-
-        <%= image_tag(post.photo) %>
-
-      </div>
-
-            
-  <% end %>
+  

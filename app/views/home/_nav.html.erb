@@ -12,43 +12,42 @@
 
         <ul class="menu hidden ulnav top-1/3 md:flex md:gap-x-5 lg:text-xl" >            
             
-
-            <li>                                            
-                <% if !user_signed_in? %>
-                    <%= link_to 'Iniciar sesion', new_user_session_path, class: "text-main-text " %>
-                <% end %>                               
-            </li >
-
-            <li>
-                 <% if !user_signed_in? %>
-                    <%= link_to 'Crear cuenta', new_user_registration_path, class: "text-main-text " %>
-                <% end %>
-            </li>                   
-                       
-
-            <li>
-                 <% if user_signed_in? %>
-                    <%= link_to 'Nueva  reseña',  new_post_path, class: "text-main-text " %>
-                <% end %>
-            </li>
-
-
-            <li>
+             <li>
                 <%= link_to 'Pincipal', root_path, class: "text-main-text " %>
             </li>
 
-            <li>
-                 <% if user_signed_in? %>
-                    <%= link_to 'Mis reseñas',  posts_path, class: "text-main-text " %>
-                <% end %>
-            </li>
 
-             <li>
-                 <% if user_signed_in? %>
+            <% if !user_signed_in? %>
+                <li>                                                        
+                    <%= link_to 'Iniciar sesion', new_user_session_path, class: "text-main-text " %>                                              
+                </li>
+            <% end %> 
+            
+             <% if !user_signed_in? %>
+                <li>                
+                    <%= link_to 'Crear cuenta', new_user_registration_path, class: "text-main-text " %>                
+                </li>                   
+            <% end %>
+                       
+             <% if user_signed_in? %>
+                <li>                
+                    <%= link_to 'Nueva  reseña',  new_post_path, class: "text-main-text " %>
+                
+                </li>
+            <% end %>
+           
+            <% if user_signed_in? %>
+                <li>                 
+                    <%= link_to 'Mis reseñas',  posts_path, class: "text-main-text " %>                
+                </li>
+            <% end %>
+
+            <% if user_signed_in? %>
+                <li>                 
                     <%= link_to 'Cerrar Sesion', destroy_user_session_path, class: "text-main-text " %>
-                <% end %>
-            </li>
-
+                
+                </li>
+            <% end %>
 
         </ul>
 
