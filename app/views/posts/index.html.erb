@@ -1,8 +1,6 @@
-<%= render "nav"%>
+<%= render 'home/nav'%>
 
-
-  
-  <% @posts.each do | post | %>    
+  <% @user.posts.each do | post | %>    
       <div>
         <h1>
             <%= link_to post.title, post %>
@@ -13,14 +11,7 @@
 
         <%= image_tag(post.photo) %>
 
-
       </div>
 
             
   <% end %>
-
-
-
-<%# class: "btn btn-lg btn-primary rounded-pill"  %>
-
-
