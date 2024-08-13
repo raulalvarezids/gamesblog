@@ -20,6 +20,28 @@ class PostsController < ApplicationController
     end     
   end
 
+
+
+  def edit
+    @post = Post.find(params[:id])    
+  end
+    
+  def update 
+    @post = Post.find(params[:id])        
+      
+    if post_params[:photo].present?
+      @post.photo.purge
+    end
+
+    if @post.update(post_params)          
+      redirect_to posts_path, notice: 'Post was successfully updated.'
+    else        
+      render :edit, status: :unprocessable_entity
+    end        
+
+  end
+
+
   private
   def post_params    
     params.require(:post).permit(:title, :body, :photo)

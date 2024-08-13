@@ -1,37 +1,50 @@
 <%= form_with model: @post do |form| %>
 
-<div>
-    <%= form.label :title%>
-    <%= form.text_field :title%>
-    <% @post.errors.full_messages_for(:title).each do |message| %>    
-        <span>
-            <%= message%>
-        </span>
-    <% end %>
-</div>
+<div class=' w-[90%] mx-auto mt-4 flex flex-col gap-8 p-2 md:w-[60%]  md:gap-10 lg:w-[50%] xl:w-[40%] '>
+    
+    <div >        
+        <div class='flex flex-col w-[80%] mx-auto mb-3 mt-3  text-main-text md:mb-5 xl:mb-8' >
+            <%= form.label :title%>
+            <%= form.text_field :title, class:'border-inputsbd focus:border-inputsbd rounded text-main-text'
+            %>
+            <% @post.errors.full_messages_for(:title).each do |message| %>    
+                <span class='text-red-600'>
+                    <%= message%>
+                </span>
+            <% end %>
+        </div>
 
-<div>
-    <%= form.label :body%>
-    <%= form.text_area :body%>
-     <% @post.errors.full_messages_for(:body).each do |message| %>    
-        <span>
-            <%= message%>
-        </span>
-    <% end %>
-</div>
+        <div class='flex flex-col w-[80%] mx-auto mb-3  text-main-text md:mb-5 xl:mb-8' >
+            <%= form.label :body%>
+            <%= form.text_area :body, class:'border-inputsbd focus:border-inputsbd rounded text-main-text'
+            %>
+            <% @post.errors.full_messages_for(:body).each do |message| %>    
+                <span class='text-red-600'>
+                    <%= message%>
+                </span>
+            <% end %>
+        </div>
 
-<div>
-    <%= form.label :photo%>
-    <%= form.file_field :photo%>  
-    <% @post.errors.full_messages_for(:photo).each do |message| %>    
-        <span>
-            <%= message%>
-        </span>
-    <% end %>
-</div>
+        <div class='flex flex-col w-[80%] mx-auto mb-3  text-main-text '>
+            <%= form.label :photo%>
+            <%= form.file_field :photo, class:'file:border-solid file:border-inputsbd  file:border-2 file:bg-white'
+            %>  
+            <% @post.errors.full_messages_for(:photo).each do |message| %>    
+                <span class='text-red-600'>
+                    <%= message%>
+                </span>
+            <% end %>
+        </div>
 
-<div>
-      <%= form.submit  %>
+    </div>
+    
+    <div class='text-center  xl:mt-8  '>
+        <%= form.submit class:'cursor-pointer border-2 border-inputsbd p-2 px-5 rounded text-main-text md:w-40  lg:w-44'  %>
+    </div>
+
+
+
+
 </div>
 
     
