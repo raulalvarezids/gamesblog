@@ -10,10 +10,9 @@ class PostsController < ApplicationController
   end
 
   def create    
-    @user = User.find(current_user.id)
-    @post = @user.posts.new(post_params)
-
-    if @post.save      
+    @user = User.find(current_user.id)      
+    @post = @user.posts.create(post_params)
+    if @post.valid?
       redirect_to root_path, notice: 'Post was successfully created.'
     else      
       render :new, status: :unprocessable_entity

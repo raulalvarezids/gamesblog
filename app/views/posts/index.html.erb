@@ -1,9 +1,15 @@
-<%= render 'home/nav'%>
-           
-<h1 class='text-main-text text-center my-3'  >Puedes dar click en el titulo para editar tus reseñas</h1>
+<%= render 'nav'%>
+
+<div class=' w-[80%] mx-auto lg:flex lg:gap-8 lg:justify-center lg:items-center'>
+  <h1 class='  font-bold text-lg md:text-2xl'>Mis reseñas: </h1>
+
+  <span class='text-main-text text-center my-3 text-xs md:text-xl'  >Puedes dar click en el titulo para editar tus reseñas</span>
+</div>
 
 
-<div class='flex gap-8 mt-5 w-[80%] mx-auto  flex-wrap justify-start'>
+
+
+<div class='flex gap-8 mt-5 w-[80%] mx-auto  flex-wrap justify-start md:justify-center'>
   <%= render @user.posts %>
 </div>
 
